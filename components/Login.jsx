@@ -64,16 +64,7 @@ export default function Login({ onLogin }) {
                 <span style={{ color: 'white', fontSize: '36px', fontWeight: 800 }}>M</span>
             </div>
 
-            {/* Título */}
-            <h1 style={{
-                fontSize: '32px',
-                fontWeight: 800,
-                color: '#111827',
-                marginBottom: '8px',
-                textAlign: 'center'
-            }}>
-                Marinia
-            </h1>
+            {/* Subtítulo */}
             <p style={{
                 fontSize: '16px',
                 color: '#6b7280',
