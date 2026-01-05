@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Search, Send, Phone, Video, MoreVertical, CheckCheck } from "lucide-react";
+import { Search, Send, Phone, CheckCheck } from "lucide-react";
 import { chats } from "@/data/mockData";
 
 export default function Messages() {
@@ -236,15 +236,9 @@ export default function Messages() {
                                     <p style={{ fontSize: '12px', color: '#16a34a', fontWeight: 500, marginTop: '2px' }}>En línea</p>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
                                 <button style={{ padding: '10px' }} className="text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all">
                                     <Phone style={{ width: '22px', height: '22px' }} />
-                                </button>
-                                <button style={{ padding: '10px' }} className="text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all">
-                                    <Video style={{ width: '22px', height: '22px' }} />
-                                </button>
-                                <button style={{ padding: '10px' }} className="text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-xl transition-all">
-                                    <MoreVertical style={{ width: '22px', height: '22px' }} />
                                 </button>
                             </div>
                         </div>

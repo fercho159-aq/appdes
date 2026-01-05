@@ -35,7 +35,7 @@ function Toggle({ enabled, onChange }) {
     );
 }
 
-export default function Settings() {
+export default function Settings({ onLogout, userRFC }) {
     const [notifications, setNotifications] = useState(true);
     const [sound, setSound] = useState(true);
 
@@ -95,7 +95,7 @@ export default function Settings() {
                     </div>
                     <div style={{ flex: 1 }}>
                         <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#111827' }}>{currentUser.name}</h3>
-                        <p style={{ fontSize: '14px', color: '#6b7280', marginTop: '4px' }}>{currentUser.email}</p>
+                        <p style={{ fontSize: '14px', color: '#6b7280', marginTop: '4px' }}>{userRFC || currentUser.email}</p>
                     </div>
                     <ChevronRight style={{ width: '20px', height: '20px', color: '#9ca3af' }} />
                 </div>
@@ -151,18 +151,20 @@ export default function Settings() {
                 </div>
 
                 {/* Cerrar sesión */}
-                <button style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '16px',
-                    padding: '20px 24px',
-                    borderRadius: '20px',
-                    border: 'none',
-                    cursor: 'pointer',
-                    backgroundColor: '#fef2f2',
-                    transition: 'all 0.2s'
-                }}>
+                <button
+                    onClick={onLogout}
+                    style={{
+                        width: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '16px',
+                        padding: '20px 24px',
+                        borderRadius: '20px',
+                        border: 'none',
+                        cursor: 'pointer',
+                        backgroundColor: '#fef2f2',
+                        transition: 'all 0.2s'
+                    }}>
                     <div style={{
                         width: '40px',
                         height: '40px',
